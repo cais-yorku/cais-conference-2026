@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAIS Conference 2025 | Centre for AI & Society</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #E31837 0%, #8B0015 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+        }
+
+        .hero .date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0 2rem;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background: #E31837;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            color: #E31837;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #E31837;
+        }
+
+        h3 {
+            color: #8B0015;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #E31837;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+        }
+
+        .schedule {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .day-title {
+            background: #E31837;
+            color: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .schedule-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #8B0015;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 1.5rem;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #E31837;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #E31837;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #8B0015;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .speaker-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .speaker-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #E31837, #8B0015);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #E31837;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .schedule-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav a {
+                border-bottom: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <div class="logo-text">York University</div>
+            <div style="border-left: 2px solid white; height: 30px;"></div>
+            <div class="logo-text">CAIS</div>
+        </div>
+        <div class="hero">
+            <h1>CAIS Conference 2025</h1>
+            <p>Advancing AI Systems, Governance & Society</p>
+            <p class="date">June 15-16, 2025 | York University, Toronto</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About the Conference</h2>
+            <p>The Centre for Artificial Intelligence & Society (CAIS) at York University is pleased to invite you to our two-day conference exploring the cutting edge of AI systems, governance, and societal impact. This conference brings together researchers, practitioners, policymakers, and industry leaders to advance the state of the art in the theory and practice of artificial intelligence systems.</p>
+            
+            <p>Our systems approach emphasizes how AI technologies operate when embedded in real-world contexts, interacting with humans and other technologies. Join us for engaging presentations, workshops, and discussions on AI systems that address societal priorities in health care, smart cities, sustainability, and ensure fairness, explainability, reliability, and trust.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Conference Themes</h3>
+                    <ul>
+                        <li>AI Systems Engineering</li>
+                        <li>AI Governance & Policy</li>
+                        <li>AI for Health Care</li>
+                        <li>Smart Cities & Sustainability</li>
+                        <li>Fair & Explainable AI</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Who Should Attend</h3>
+                    <ul>
+                        <li>AI Researchers & Academics</li>
+                        <li>Industry Practitioners</li>
+                        <li>Policy Makers</li>
+                        <li>Graduate Students</li>
+                        <li>Technology Leaders</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Important Dates</h3>
+                    <ul>
+                        <li><strong>Abstract Submission:</strong> April 15, 2025</li>
+                        <li><strong>Registration Deadline:</strong> June 1, 2025</li>
+                        <li><strong>Conference Dates:</strong> June 15-16, 2025</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>Conference Schedule</h2>
+            
+            <div class="schedule">
+                <div class="day-title">Day 1 - June 15, 2025</div>
+                
+                <div class="schedule-item">
+                    <div class="time">8:00 - 9:00 AM</div>
+                    <div>
+                        <strong>Registration & Coffee</strong>
+                        <p>Welcome reception and registration</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">9:00 - 9:30 AM</div>
+                    <div>
+                        <strong>Opening Ceremony</strong>
+                        <p>Welcome address by CAIS Director and York University leadership</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">9:30 - 11:00 AM</div>
+                    <div>
+                        <strong>Keynote Session 1: AI Systems in Practice</strong>
+                        <p>Exploring real-world deployment of AI systems and their societal implications</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">11:00 - 11:30 AM</div>
+                    <div>
+                        <strong>Coffee Break & Networking</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">11:30 - 1:00 PM</div>
+                    <div>
+                        <strong>Parallel Sessions</strong>
+                        <p>Track A: AI Governance & Ethics<br>
+                        Track B: AI for Healthcare<br>
+                        Track C: Smart Cities & Sustainability</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">1:00 - 2:00 PM</div>
+                    <div>
+                        <strong>Lunch</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">2:00 - 3:30 PM</div>
+                    <div>
+                        <strong>Workshop Sessions</strong>
+                        <p>Hands-on workshops on AI tools and methodologies</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:30 - 4:00 PM</div>
+                    <div>
+                        <strong>Afternoon Break</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">4:00 - 5:30 PM</div>
+                    <div>
+                        <strong>Panel Discussion: Future of AI Governance</strong>
+                        <p>Expert panel discussing policy frameworks and regulatory approaches</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">6:00 - 8:00 PM</div>
+                    <div>
+                        <strong>Welcome Reception</strong>
+                        <p>Networking dinner and poster session</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule">
+                <div class="day-title">Day 2 - June 16, 2025</div>
+                
+                <div class="schedule-item">
+                    <div class="time">8:30 - 9:00 AM</div>
+                    <div>
+                        <strong>Morning Coffee</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">9:00 - 10:30 AM</div>
+                    <div>
+                        <strong>Keynote Session 2: Fair & Explainable AI</strong>
+                        <p>Addressing bias, transparency, and accountability in AI systems</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">10:30 - 11:00 AM</div>
+                    <div>
+                        <strong>Coffee Break</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">11:00 - 12:30 PM</div>
+                    <div>
+                        <strong>Parallel Sessions</strong>
+                        <p>Track A: AI Engineering & Systems Design<br>
+                        Track B: Industry Applications<br>
+                        Track C: Research Presentations</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">12:30 - 1:30 PM</div>
+                    <div>
+                        <strong>Lunch</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">1:30 - 3:00 PM</div>
+                    <div>
+                        <strong>Interactive Sessions</strong>
+                        <p>Collaborative problem-solving and case studies</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:00 - 3:30 PM</div>
+                    <div>
+                        <strong>Afternoon Break</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:30 - 4:45 PM</div>
+                    <div>
+                        <strong>Closing Keynote: The Road Ahead</strong>
+                        <p>Future directions for AI research and society</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">4:45 - 5:00 PM</div>
+                    <div>
+                        <strong>Closing Remarks & Awards</strong>
+                        <p>Conference summary and best paper awards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="speakers">
+            <h2>Featured Speakers</h2>
+            <p>We are assembling a distinguished lineup of speakers from academia, industry, and government. Confirmed speakers will be announced soon.</p>
+            
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-placeholder">TBA</div>
+                    <h3>Keynote Speaker 1</h3>
+                    <p>Details coming soon</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-placeholder">TBA</div>
+                    <h3>Keynote Speaker 2</h3>
+                    <p>Details coming soon</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-placeholder">TBA</div>
+                    <h3>Panel Expert</h3>
+                    <p>Details coming soon</p>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-placeholder">TBA</div>
+                    <h3>Workshop Leader</h3>
+                    <p>Details coming soon</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="registration">
+            <h2>Registration</h2>
+            <p>Register now to secure your spot at the CAIS Conference 2025. Early bird rates available until May 1, 2025.</p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Early Bird Rates</h3>
+                    <p>(Until May 1, 2025)</p>
+                    <ul>
+                        <li><strong>Students:</strong> $150 CAD</li>
+                        <li><strong>Academics:</strong> $300 CAD</li>
+                        <li><strong>Industry:</strong> $500 CAD</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Regular Rates</h3>
+                    <p>(May 2 - June 1, 2025)</p>
+                    <ul>
+                        <li><strong>Students:</strong> $200 CAD</li>
+                        <li><strong>Academics:</strong> $400 CAD</li>
+                        <li><strong>Industry:</strong> $650 CAD</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;">All registrations include access to all sessions, conference materials, coffee breaks, lunches, and the welcome reception.</p>
+            
+            <a href="#" class="cta-button">Register Now</a>
+        </section>
+
+        <section id="venue">
+            <h2>Venue & Accommodation</h2>
+            
+            <h3>Conference Location</h3>
+            <p><strong>York University</strong><br>
+            4700 Keele Street<br>
+            Toronto, Ontario M3J 1P3<br>
+            Canada</p>
+
+            <p style="margin-top: 1rem;">The conference will be held at York University's Keele Campus in Toronto. The campus is easily accessible by public transit via the TTC York University Station (Line 1) and offers ample parking for those driving.</p>
+
+            <h3>Recommended Hotels</h3>
+            <p>A list of recommended hotels near York University with special conference rates will be provided to registered attendees.</p>
+
+            <h3>Getting to York University</h3>
+            <ul>
+                <li><strong>By Transit:</strong> Take the TTC Line 1 to York University Station</li>
+                <li><strong>By Car:</strong> Free visitor parking available on campus</li>
+                <li><strong>From Airport:</strong> Approximately 30 minutes from Toronto Pearson International Airport</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            
+            <p>For questions about the conference, please contact:</p>
+            
+            <div class="info-card" style="max-width: 600px; margin-top: 2rem;">
+                <h3>Conference Organizing Committee</h3>
+                <p><strong>Email:</strong> cais.conference@yorku.ca</p>
+                <p><strong>Phone:</strong> (416) 736-2100</p>
+                <p><strong>Website:</strong> <a href="https://www.yorku.ca/research/cais/" style="color: #E31837;">www.yorku.ca/research/cais/</a></p>
+            </div>
+
+            <p style="margin-top: 2rem;">Follow us on social media for updates:</p>
+            <div class="footer-links" style="justify-content: flex-start; margin-top: 1rem;">
+                <a href="https://twitter.com/CAISatYorkU/" style="color: #E31837;">Twitter</a>
+                <a href="https://www.linkedin.com/company/the-centre-for-artificial-intelligence-society-york-university/" style="color: #E31837;">LinkedIn</a>
+                <a href="https://youtube.com/@aiandsocietyatyorkuniversity" style="color: #E31837;">YouTube</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Centre for Artificial Intelligence & Society, York University. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.yorku.ca/about/privacy-legal/">Privacy & Legal</a>
+            <a href="https://accessibility.students.yorku.ca/">Accessibility</a>
+            <a href="https://www.yorku.ca/safety/">Community Safety</a>
+        </div>
+    </footer>
+</body>
+</html>
