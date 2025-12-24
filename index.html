@@ -20,8 +20,68 @@
         header {
             background: linear-gradient(135deg, #E31837 0%, #8B0015 100%);
             color: white;
-            padding: 2rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background: white;
+        }
+
+        .header-content {
+            padding: 2rem 0;
         }
 
         .logo-section {
@@ -250,6 +310,10 @@
         }
 
         @media (max-width: 768px) {
+            .slideshow-container {
+                height: 200px;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -275,16 +339,45 @@
     </style>
 </head>
 <body>
+    <!-- Image Slideshow at the very top -->
+    <div class="slideshow-container">
+        <div class="slideshow">
+            <div class="slide active">
+                <img src="photot1.jpg" alt="York University Campus Aerial View">
+            </div>
+            <div class="slide">
+                <img src="photot2.png" alt="Vari Hall">
+            </div>
+            <div class="slide">
+                <img src="photot3.jpg" alt="Bergeron Centre">
+            </div>
+            <div class="slide">
+                <img src="photot4.jpg" alt="Scott Library">
+            </div>
+
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="goToSlide(0)"></span>
+            <span class="indicator" onclick="goToSlide(1)"></span>
+            <span class="indicator" onclick="goToSlide(2)"></span>
+            <span class="indicator" onclick="goToSlide(3)"></span>
+            <span class="indicator" onclick="goToSlide(4)"></span>
+        </div>
+    </div>
+
+    <!-- Header with conference info -->
     <header>
-        <div class="logo-section">
+        <div class="header-content">
+            <div class="logo-section">
             <div class="logo-text">York University</div>
             <div style="border-left: 2px solid white; height: 30px;"></div>
             <div class="logo-text">CAIS</div>
         </div>
         <div class="hero">
-            <h1>CAIS Conference 2025</h1>
+            <h1>CAIS Conference 2026</h1>
             <p>Advancing AI Systems, Governance & Society</p>
-            <p class="date">June 15-16, 2025 | York University, Toronto</p>
+            <p class="date">July 18-19, 2025 | York University, Toronto</p>
+        </div>
         </div>
     </header>
 
@@ -608,5 +701,54 @@
             <a href="https://www.yorku.ca/safety/">Community Safety</a>
         </div>
     </footer>
+	<script>
+	let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+
+console.log('Slideshow initialized with', totalSlides, 'slides');
+
+function showSlide(n) {
+    // Remove active class from current slide
+    slides[currentSlide].classList.remove('active');
+    indicators[currentSlide].classList.remove('active');
+    
+    // Calculate new slide index
+    currentSlide = n;
+    if (currentSlide >= totalSlides) currentSlide = 0;
+    if (currentSlide < 0) currentSlide = totalSlides - 1;
+    
+    // Add active class to new slide
+    slides[currentSlide].classList.add('active');
+    indicators[currentSlide].classList.add('active');
+    
+    console.log('Showing slide', currentSlide);
+}
+
+function showNextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function goToSlide(n) {
+    showSlide(n);
+}
+
+// Auto-advance slides every 4 seconds
+let slideInterval = setInterval(showNextSlide, 2000);
+console.log('Auto-slide started, changing every 4 seconds');
+
+// Optional: Pause on hover
+const slideshowContainer = document.querySelector('.slideshow-container');
+slideshowContainer.addEventListener('mouseenter', () => {
+    clearInterval(slideInterval);
+    console.log('Slideshow paused on hover');
+});
+
+slideshowContainer.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(showNextSlide, 2000);
+    console.log('Slideshow resumed');
+});
+	</script>
 </body>
 </html>
