@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAIS Conference 2026, York University | Centre for AI & Society</title>
+    <title>CAIS Conference 2026 | Centre for AI & Society</title>
     <style>
         * {
             margin: 0;
@@ -199,6 +199,39 @@
             border-left: 4px solid #E31837;
         }
 
+        .person-card {
+            text-align: center;
+        }
+
+        .person-card img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1rem;
+            border: 4px solid #f3d6db;
+        }
+
+        .person-card h4 {
+            color: #E31837;
+            margin-bottom: 0.5rem;
+        }
+
+        .person-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-link {
+            color: #8B0015;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .profile-link:hover {
+            text-decoration: underline;
+        }
+
         .info-card h3 {
             margin-top: 0;
         }
@@ -268,6 +301,16 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
+        }
+
+        .speaker-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 1rem;
+            border: 4px solid #f3d6db;
         }
 
         .speaker-placeholder {
@@ -621,24 +664,53 @@
             
             <div class="speakers-grid">
                 <div class="speaker-card">
-                    <div class="speaker-placeholder">TBA</div>
-                    <h3>Keynote Speaker 1</h3>
-                    <p>Details coming soon</p>
+                    <img src="speakers/Mamdani_Muhammad.jpg" alt="Portrait of Muhammad Mamdani">
+                    <h3>Muhammad Mamdani</h3>
+                    <p>University of Toronto</p>
+                    <p><a href="https://lmp.utoronto.ca/faculty/muhammad-mamdani" class="profile-link">Profile</a></p>
+                </div>
+                <div class="speaker-card">
+                    <img src="speakers/Mei-Nagappan.png" alt="Portrait of Mei Nagappan">
+                    <h3>Mei Nagappan</h3>
+                
+                    <p>University of Waterloo</p>
+                    <p><a href="https://cs.uwaterloo.ca/~m2nagapp/" class="profile-link">Profile</a></p>
+                </div>
+                <div class="speaker-card">
+                    <img src="speakers/Mayur-Joshi.png" alt="Portrait of Mayur Joshi">
+                    <h3>Mayur Joshi</h3>
+                   
+                    <p>University of Ottawa</p>
+                    <p><a href="https://mayurpjoshi.com/" class="profile-link">Profile</a></p>
+                </div>
+                <div class="speaker-card">
+                    <img src="speakers/Jun_Ma.png" alt="Portrait of Jun Ma">
+                    <h3>Jun Ma</h3>
+                  
+                    <p>University Health Network</p>
+                    <p><a href="https://www.linkedin.com/in/jun-ma-867b34224?originalSubdomain=ca" class="profile-link">Profile</a></p>
+                </div>
+                <div class="speaker-card">
+                    <img src="speakers/meng_xu.jpg" alt="Portrait of Meng Xu">
+                    <h3>Meng Xu</h3>
+                   
+                    <p>University of Waterloo</p>
+                    <p><a href="https://cs.uwaterloo.ca/~m285xu/" class="profile-link">Profile</a></p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-placeholder">TBA</div>
-                    <h3>Keynote Speaker 2</h3>
-                    <p>Details coming soon</p>
+                    <h3>Coming Soon</h3>
+                    <p>Additional speaker announcement forthcoming</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-placeholder">TBA</div>
-                    <h3>Panel Expert</h3>
-                    <p>Details coming soon</p>
+                    <h3>Coming Soon</h3>
+                    <p>Additional speaker announcement forthcoming</p>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-placeholder">TBA</div>
-                    <h3>Workshop Leader</h3>
-                    <p>Details coming soon</p>
+                    <h3>Coming Soon</h3>
+                    <p>Additional speaker announcement forthcoming</p>
                 </div>
             </div>
         </section>
@@ -648,46 +720,51 @@
             
             <h3>Organization Chairs</h3>
             <div class="info-grid">
-                <div class="info-card">
-                    <h4 style="color: #E31837; margin-bottom: 0.5rem;">Divya Sharma</h4>
-                    <p style="margin-bottom: 0.5rem;">York University</p>
-                    <a href="https://www.yorku.ca/science/profiles/faculty/divya-sharma/" style="color: #8B0015;">Profile</a>
+                <div class="info-card person-card">
+                    <img src="og/Divya-Sharma.png" alt="Portrait of Divya Sharma">
+                    <h4>Divya Sharma</h4>
+                    <p>York University</p>
+                    <a href="https://www.yorku.ca/science/profiles/faculty/divya-sharma/" class="profile-link">Profile</a>
                 </div>
-                <div class="info-card">
-                    <h4 style="color: #E31837; margin-bottom: 0.5rem;">Andrew Sarta</h4>
-                    <p style="margin-bottom: 0.5rem;">York University</p>
-                    <a href="https://profiles.laps.yorku.ca/profiles/asarta/" style="color: #8B0015;">Profile</a>
+                <div class="info-card person-card">
+                    <img src="og/Andrew-Sarta.png" alt="Portrait of Andrew Sarta">
+                    <h4>Andrew Sarta</h4>
+                    <p>York University</p>
+                    <a href="https://profiles.laps.yorku.ca/profiles/asarta/" class="profile-link">Profile</a>
                 </div>
-                <div class="info-card">
-                    <h4 style="color: #E31837; margin-bottom: 0.5rem;">Song Wang</h4>
-                    <p style="margin-bottom: 0.5rem;">York University</p>
-                    <a href="https://www.eecs.yorku.ca/~wangsong/" style="color: #8B0015;">Profile</a>
+                <div class="info-card person-card">
+                    <img src="og/Song-Wang.jpg" alt="Portrait of Song Wang">
+                    <h4>Song Wang</h4>
+                    <p>York University</p>
+                    <a href="https://www.eecs.yorku.ca/~wangsong/" class="profile-link">Profile</a>
                 </div>
             </div>
 
             <h3 style="margin-top: 2rem;">Steering Committee</h3>
             <div class="info-grid">
-                <div class="info-card">
-                    <h4 style="color: #E31837; margin-bottom: 0.5rem;">James Elder</h4>
-                    <p style="margin-bottom: 0.5rem;">York University</p>
-					 <a href="https://www.elderlab.yorku.ca/jelder/" style="color: #8B0015;">Profile</a>
+                <div class="info-card person-card">
+                    <img src="og/James-Elder.jpg" alt="Portrait of James Elder">
+                    <h4>James Elder</h4>
+                    <p>York University</p>
+					 <a href="https://www.elderlab.yorku.ca/jelder/" class="profile-link">Profile</a>
                 </div>
-                <div class="info-card">
-                    <h4 style="color: #E31837; margin-bottom: 0.5rem;">Jonathan Obar</h4>
-                    <p style="margin-bottom: 0.5rem;">York University</p>
-					 <a href="https://profiles.laps.yorku.ca/profiles/jaobar/" style="color: #8B0015;">Profile</a>
+                <div class="info-card person-card">
+                    <img src="og/Jonathan-Obar.png" alt="Portrait of Jonathan Obar">
+                    <h4>Jonathan Obar</h4>
+                    <p>York University</p>
+					 <a href="https://profiles.laps.yorku.ca/profiles/jaobar/" class="profile-link">Profile</a>
                 </div>
             </div>
             <p style="margin-top: 1rem;">For more information about our steering committee, please visit the <a href="https://www.yorku.ca/research/cais/team/" style="color: #E31837;">CAIS Team page</a>.</p>
         </section>
         <section id="registration">
             <h2>Registration</h2>
-            <p>Register now to secure your spot at the CAIS Conference 2026. Early bird rates available until May 1, 2026.</p>
+            <p>Register now to secure your spot at the CAIS Conference 2026. Early bird rates available until June 1st, 2026.</p>
             
             <div class="info-grid">
                 <div class="info-card">
                     <h3>Early Bird Rates</h3>
-                    <p>(Until May 1, 2026)</p>
+                    <p>(Until June 1st, 2026)</p>
                     <ul>
                         <li><strong>Students:</strong> $50 CAD</li>
                         <li><strong>Academics:</strong> $100 CAD</li>
@@ -696,7 +773,7 @@
                 </div>
                 <div class="info-card">
                     <h3>Regular Rates</h3>
-                    <p>(May 2 - June 1, 2026)</p>
+                    <p>(June 2nd - July 1st, 2026)</p>
                     <ul>
                         <li><strong>Students:</strong> $100 CAD</li>
                         <li><strong>Academics:</strong> $150 CAD</li>
@@ -739,17 +816,11 @@
             
             <div class="info-card" style="max-width: 600px; margin-top: 2rem;">
                 <h3>Conference Organizing Committee</h3>
-                <p><strong>Email:</strong> wangsong@yorku.ca </p>
+                <p><strong>Email:</strong> wangsong@yorku.ca | divya03@yorku.ca | andrew.sarta@yorku.ca</p>
                 <p><strong>Phone:</strong> (416) 736-2100</p>
                 <p><strong>Website:</strong> <a href="https://www.yorku.ca/research/cais/" style="color: #E31837;">www.yorku.ca/research/cais/</a></p>
             </div>
 
-            <p style="margin-top: 2rem;">Follow us on social media for updates:</p>
-            <div class="footer-links" style="justify-content: flex-start; margin-top: 1rem;">
-                <a href="https://twitter.com/CAISatYorkU/" style="color: #E31837;">Twitter</a>
-                <a href="https://www.linkedin.com/company/the-centre-for-artificial-intelligence-society-york-university/" style="color: #E31837;">LinkedIn</a>
-                <a href="https://youtube.com/@aiandsocietyatyorkuniversity" style="color: #E31837;">YouTube</a>
-            </div>
         </section>
     </div>
 
@@ -813,5 +884,3 @@ slideshowContainer.addEventListener('mouseleave', () => {
 	</script>
 </body>
 </html>
-
-
