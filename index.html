@@ -263,6 +263,30 @@
             gap: 1.5rem;
         }
 
+        .schedule-item strong {
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .schedule-item p {
+            margin: 0.25rem 0;
+        }
+
+        .schedule-item.session-header {
+            background: #fff4f6;
+            border-left-color: #E31837;
+        }
+
+        .schedule-item.session-header .time {
+            color: #8B0015;
+        }
+
+        .schedule-location {
+            margin: 0 0 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
         .time {
             font-weight: bold;
             color: #E31837;
@@ -426,7 +450,8 @@
         <div class="hero">
             <h1>CAIS Conference 2026</h1>
             <p>Advancing AI Systems, Governance & Society</p>
-            <p class="date">July 17-18, 2026 | York University, Toronto</p>
+            <p class="date">July 17-18, 2026 | <a href="https://www.google.com/maps?sca_esv=efcb37deddedd20f&rlz=1C1CHBF_enCA832CA832&output=search&q=Second+Student+Centre,+York+University&source=lnms&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cyi4EYJ5__xGYa6IklcxJgUe7FK8X0Cl7tuB93847Q5XKMK3snwamK27ChS0uJe7x2Hl31-PcDLRIZ9jqTJjMe5BTQGpOcXAYILflg1Vx-IbXC9bfnHPH6-n0rnpOyGeWQI--LAaUv2aWVpCwDIqT30DM_CFbc4lZzwwvNh4jXbVT9S2cibCTniGN7LPYEb-XBP0wyw&entry=mc&ved=1t:200715&ictx=111"> Second Student Centre </a>, York University, Toronto</p>
+			
         </div>
         </div>
     </header>
@@ -485,89 +510,202 @@
 
         <section id="schedule">
             <h2>Conference Schedule</h2>
+            <p class="schedule-location">Program updated from the conference document for July 17-18, 2026 at the Second Student Centre, York University.</p>
             
             <div class="schedule">
                 <div class="day-title">Day 1 - Friday, July 17, 2026</div>
                 
                 <div class="schedule-item">
-                    <div class="time">8:30 - 9:00 AM</div>
+                    <div class="time">8:30-9:00 AM</div>
                     <div>
-                        <strong>Registration & Coffee</strong>
-                        <p>Arrival and check-in</p>
+                        <strong>Registration and Morning Coffee</strong>
+                        <p>Participant arrival, registration, and informal networking.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">9:00 - 9:15 AM</div>
+                    <div class="time">9:00-9:15 AM</div>
                     <div>
                         <strong>Opening Ceremony</strong>
-                        <p>CAIS Director and Conference Chairs</p>
+                        <p>Welcome from the CAIS Director and Conference Co-Chairs.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">9:15 - 10:15 AM</div>
+                    <div class="time">9:15-10:15 AM</div>
                     <div>
-                        <strong>Day 1 Keynote</strong>
-                        <p><a href="https://lmp.utoronto.ca/faculty/muhammad-mamdani" class="profile-link">Prof. Muhammad Mamdani</a></p>
+                        <strong>Keynote Speaker: <a href="https://lmp.utoronto.ca/faculty/muhammad-mamdani" class="profile-link">Dr. Muhammad Mamdani</a>, TCAIREM, University of Toronto</strong>
+                        <p>Application of Artificial Intelligence in Healthcare: From Research to Practice</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item session-header">
+                    <div class="time">10:20 AM-12:00 PM</div>
+                    <div>
+                        <strong>Session 1: Human-Centred and Responsible AI in Practice</strong>
+                        <p>This session explores how AI is experienced, evaluated, and governed in practical settings, including healthcare, human-computer interaction, physical activity, and institutional oversight.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">10:15 - 11:45 AM</div>
+                    <div class="time">10:20-10:45 AM</div>
                     <div>
-                        <strong>Parallel Sessions</strong>
-						 <p>Track A: <a href="https://cs.uwaterloo.ca/~m2nagapp/" class="profile-link">Prof. Mei Nagappan</a><br>
-                        Track B:  <a href="https://cfe.torontomu.ca/people/brenda-mcphail" class="profile-link">Dr. Brenda McPhail</a><br>
-                
+                        <strong>Featured Speaker: <a href="https://cs.uwaterloo.ca/~m2nagapp/" class="profile-link">Dr. Mei Nagappan</a> | University of Waterloo</strong>
+                        <p>Title to be confirmed</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">12:00 - 1:00 PM</div>
+                    <div class="time">10:45-11:10 AM</div>
                     <div>
-                        <strong>Lunch Break & Networking</strong>
+                        <strong>Featured Speaker: <a href="https://cfe.torontomu.ca/people/brenda-mcphail" class="profile-link">Dr. Brenda McPhail</a> | Information and Privacy Commissioner of Ontario</strong>
+                        <p>AI Governance and the IPC-OHRC Privacy Principles</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">1:00 - 2:30 PM</div>
-                    <div>
-                        <strong>Parallel Sessions</strong>
-                        <p>
-                           Track A:  <a href="https://cs.uwaterloo.ca/~m285xu/" class="profile-link"> Prof. Meng Xu</a><br>
-                          Track B:   <a href="https://www.physicaltherapy.utoronto.ca/jay-shaw" class="profile-link">Prof. Jay Shaw</a> 
-                        </p>
+                    <div class="time">11:10-11:35 AM</div>
+                    <div>  
+                        <strong> <a href="https://schulich.yorku.ca/faculty/adam-diamant/" class="profile-link"> Dr. Adam Diamant </a> | Schulich School of Business</strong>
+                        <p>AI Pose Analysis and Kinematic Profiling of Range-of-Motion Variations in Resistance Training</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">2:30 - 3:00 PM</div>
+                    <div class="time">11:35 AM-12:00 PM</div>
                     <div>
-                        <strong>Coffee Break & Networking</strong>
+					
+					
+                        <strong><a href="https://www.cigionline.org/people/julianna-lily-kowlessar/" class="profile-link"> Dr. Julianna Kowlessar </a> and <a href="https://profiles.laps.yorku.ca/profiles/jaobar/" class="profile-link">Dr. Jonathan Obar </a> | York University</strong>
+                        <p>Evaluating Generative AI Transparency Policy: What Companies Disclose about Ground Truthing, Training, and Implementing Machine Learning Systems</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">3:00 - 4:00 PM</div>
+                    <div class="time">12:00-1:00 PM</div>
                     <div>
-                        <strong>Panel Session</strong>
+                        <strong>Lunch and Networking</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item session-header">
+                    <div class="time">1:00-2:40 PM</div>
+                    <div>
+                        <strong>Session 2: Building and Governing Trustworthy AI Systems</strong>
+                        <p>This session connects advances in AI methodology and computational efficiency with broader questions of ethics, interpretability, accountability, and responsible decision-making.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">4:00 - 5:30 PM</div>
+                    <div class="time">1:00-1:25 PM</div>
                     <div>
-                        <strong>Coffee Break, Networking & Poster Session</strong>
-                        <p>Mixed with poster session</p>
+                        <strong>Featured Speaker: <a href="https://cs.uwaterloo.ca/~m285xu/" class="profile-link">Dr. Meng Xu</a> | University of Waterloo</strong>
+                        <p>Grounding LLM-Based Program Analysis via Natural-Language Abstract Interpretation</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">6:00 - 8:00 PM</div>
+                    <div class="time">1:25-1:50 PM</div>
                     <div>
-                        <strong>Welcome Reception</strong>
-                        <p>Networking Dinner</p>
+                        <strong>Featured Speaker: <a href="https://www.physicaltherapy.utoronto.ca/jay-shaw" class="profile-link">Dr. Jay Shaw</a> | University of Toronto</strong>
+                        <p>Thinking Big about AI Ethics: A Perspective from Public Health</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">1:50-2:15 PM</div>
+                    <div>
+					
+                        <strong> <a href="https://www.yorku.ca/professor/xingao/" class="profile-link"> Dr. Xin Gao</a>  | York University</strong>
+                        <p>Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">2:15-2:40 PM</div>
+                    <div>
+                        <strong> <a href="https://profiles.laps.yorku.ca/profiles/schwartz/" class="profile-link"> Dr. Mark Stephen Schwartz </a> | School of Administrative Studies, York University</strong>
+                        <p>Ethical Decision-Making through Artificial Intelligence</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">2:40-3:15 PM</div>
+                    <div>
+                        <strong>Coffee Break and Networking</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item session-header">
+                    <div class="time">3:15-4:30 PM</div>
+                    <div>
+                        <strong>Themed Panel: AI and Society - Inclusion, Transparency, Resilience, and the Public Good</strong>
+                        <p>This interdisciplinary panel considers how AI is reshaping democratic institutions, education, communication, public accountability, healthcare training, and community resilience.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:15-3:27 PM</div>
+                    <div>
+					
+					
+                        <strong> <a href="https://tax.osgoode.yorku.ca/professor-thaddeus-hwong/" class="profile-link"> Dr. Thaddeus Hwong </a> | School of Administrative Studies, York University</strong>
+                        <p>What AI Knows: We May Have Democracy, or We May Have Wealth Concentrated in the Hands of a Few, but We Can't Have Both</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:27-3:39 PM</div>
+                    <div>
+                        <strong> <a href="https://www.ariksenderovich.com/ " class="profile-link"> Dr. Arik Senderovich </a> | York University</strong>
+                        <p>Dynamic Prediction of Waiting-Time Intervals in Cancer-Care Facilities</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:39-3:51 PM</div>
+                    <div>
+                        <strong> <a href="https://discover.academics.yorku.ca/Eva.Peisachovich " class="profile-link"> Dr. Eva Hava Peisachovich  </a> | York University</strong>
+                        <p>Teaching Empathy in the Age of AI: Augmented Reality and Responsible AI Design for Dementia Care Training</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:51-4:03 PM</div>
+                    <div>
+                        <strong> <a href="https://emilykuang.github.io/ " class="profile-link"> Dr. Emily Kuang </a> | Department of Electrical Engineering and Computer Science, York University</strong>
+                        <p>&quot;It Became My Buddy, But I'm Not Afraid to Disagree&quot;: A Multi-Session Study of UX Evaluators Collaborating with Conversational AI Assistants</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">4:03-4:30 PM</div>
+                    <div>
+                        <strong>Moderated Panel Discussion and Audience Q&amp;A</strong>
+                        <p>Approximately 27 minutes.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">4:30-5:30 PM</div>
+                    <div>
+                        <strong>Poster Session, Coffee, and Networking</strong>
+                        <p>Poster presentations, informal discussion, and judging for the best poster awards.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">6:00-8:00 PM</div>
+                    <div>
+                        <strong>Welcome Reception and Networking Dinner</strong>
+                        <p>Schulich Executive Education Centre, Schulich School of Business</p>
                     </div>
                 </div>
             </div>
@@ -576,76 +714,135 @@
                 <div class="day-title">Day 2 - Saturday, July 18, 2026</div>
                 
                 <div class="schedule-item">
-                    <div class="time">9:00 - 9:30 AM</div>
+                    <div class="time">9:00-9:30 AM</div>
                     <div>
-                        <strong>Morning Coffee</strong>
-                        <p>Arrival</p>
+                        <strong>Morning Coffee and Participant Arrival</strong>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">9:30 - 9:45 AM</div>
+                    <div class="time">9:30-9:45 AM</div>
                     <div>
-                        <strong>Welcome Day 2</strong>
-                        <p>A short intro to day 2 by the chairs</p>
+                        <strong>Welcome to Day 2</strong>
+                        <p>Brief introduction and summary of the themes for the second day by the Conference Co-Chairs.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">9:45 - 10:45 AM</div>
+                    <div class="time">9:45-10:45 AM</div>
                     <div>
-                        <strong>Day 2 Keynote</strong>
-                        <p><a href="https://research.cs.queensu.ca/home/rxlu/" class="profile-link">Prof. Rongxing Lu</a></p>
+                        <strong>Keynote Address: <a href="https://research.cs.queensu.ca/home/rxlu/" class="profile-link">Dr. Rongxing Lu</a> | Queen's University</strong>
+                        <p>Deep Residual Fingerprinting: A Self-Supervised Spatio-Temporal Transformer for Network Anomaly Detection</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item session-header">
+                    <div class="time">10:45 AM-12:25 PM</div>
+                    <div>
+                        <strong>Session 3: From Foundation Models to Frontline AI Systems</strong>
+                        <p>This session examines advanced AI models and their application in biomedical imaging, healthcare resource allocation, higher-education services, and the governance of emerging agentic systems.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">10:45 - 11:15 AM</div>
+                    <div class="time">10:45-11:10 AM</div>
                     <div>
-                        <strong>Coffee Break</strong>
+                        <strong>Featured Speaker: <a href="https://www.linkedin.com/in/jun-ma-867b34224?originalSubdomain=ca" class="profile-link">Dr. Jun Ma</a> | University Health Network</strong>
+                        <p>Foundation Models for Biomedical Image Analysis</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">11:15 AM - 12:45 PM</div>
-                    <div>
-                        <strong>Invited Sessions</strong>
-                        <p>
-                            <a href="https://www.linkedin.com/in/jun-ma-867b34224?originalSubdomain=ca" class="profile-link">Dr. Jun Ma</a>
-                        </p>
+                    <div class="time">11:10-11:35 AM</div>
+                    <div>  
+                        <strong> <a href="https://sites.google.com/view/tahmedge/home" class="profile-link"> Dr. Tahmid Rahman Laskar </a> | York University</strong>
+                        <p>Lost in Translation: Do LVLM Judges Generalize Across Languages?</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">12:45 - 1:45 PM</div>
-                    <div>
-                        <strong>Lunch</strong>
+                    <div class="time">11:35 AM-12:00 PM</div>
+                    <div> 
+                        <strong> <a href="https://www.parvinmalekzadeh.com/" class="profile-link">  Dr. Parvin Malekzadeh </a> | University of Toronto</strong>
+                        <p>Reinforcement Learning for Optimizing Physician Effort Allocation in Emergency Departments</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">1:45 - 3:15 PM</div>
+                    <div class="time">12:00-12:25 PM</div>
                     <div>
-                        <strong>Invited Sessions</strong>
-                        <p>
-                           Track A: <a href="https://lassonde.yorku.ca/users/rsalahandish" class="profile-link">Prof. Razieh Salahandish</a> <br>
-                             Track B: <a href="https://mayurpjoshi.com/" class="profile-link">Prof. Mayur Joshi</a> 
-                        </p>
+                        <strong> <a href="https://lassonde.yorku.ca/users/andrew-maxwell" class="profile-link"> Dr. Andrew Maxwell</a> | Lassonde School of Engineering</strong>
+                        <p>Innovation Cartography as a Governance Framework for Agentic AI Systems</p>
+                        <p>25-minute presentation slot.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">3:15 - 3:45 PM</div>
+                    <div class="time">12:30-1:30 PM</div>
                     <div>
-                        <strong>Coffee Break</strong>
+                        <strong>Lunch and Networking</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item session-header">
+                    <div class="time">1:30-3:10 PM</div>
+                    <div>
+                        <strong>Session 4: Translating AI into Organizational Impact</strong>
+                        <p>This session considers how AI moves from research into operational environments, including organizational decision-making, healthcare technologies, urban resilience, and institutional services.</p>
                     </div>
                 </div>
 
                 <div class="schedule-item">
-                    <div class="time">3:45 - 4:15 PM</div>
+                    <div class="time">1:30-1:55 PM</div>
+                    <div>
+                        <strong>Featured Speaker: <a href="https://mayurpjoshi.com/" class="profile-link">Dr. Mayur Joshi</a> | University of Ottawa</strong>
+                        <p>When Artificial Intelligence Meets Organizational Intelligence</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">1:55-2:20 PM</div>
+                    <div>
+                        <strong>Featured Speaker: <a href="https://lassonde.yorku.ca/users/rsalahandish" class="profile-link">Dr. Razieh Salahandish</a> | York University</strong>
+                        <p>Diagnostic and Prognostic Medical Devices: From Research to Real-World Impact</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">2:20-2:45 PM</div>
+                    <div> 
+                        <strong> <a href="https://adekuleajasinuniversity.academia.edu/adedibusunnyakingboye" class="profile-link"> Dr. Adedibu Sunny Akingboye</a> | York University</strong>
+                        <p>BRIDGE: An AI-Augmented Framework for Flood-Geotechnical Risk Intelligence and Urban Resilience</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">2:45-3:10 PM</div>
+                    <div> 
+                        <strong><a href="https://sdg.utoronto.ca/people/christos-orfanidis/" class="profile-link">Dr. Christos Orfanidis</a>  | Connected Minds and the School of Human Resource Management</strong>
+                        <p>AI Chatbots as Frontline Service Systems in Higher Education: Key Takeaways from Studying Administrators' Ethical Perceptions and Decisions</p>
+                        <p>25-minute presentation slot.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:10-3:30 PM</div>
+                    <div>
+                        <strong>Coffee Break and Final Networking Session</strong>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="time">3:30-4:00 PM</div>
                     <div>
                         <strong>Closing Remarks & Awards</strong>
-                        <p>Conference summary and best poster awards</p>
+                        <p>Conference synthesis and reflections; announcement of best poster awards; recognition of speakers, reviewers, volunteers, and conference partners; and closing remarks from the CAIS Director and Conference Co-Chairs.</p>
                     </div>
                 </div>
             </div>
@@ -789,9 +986,9 @@
             <h2>Venue & Accommodation</h2>
             
             <h3>Conference Location</h3>
-            <p><strong>York University</strong><br>
-            4700 Keele Street<br>
-            Toronto, Ontario M3J 1P3<br>
+            <p><strong><a href="https://www.google.com/maps?sca_esv=efcb37deddedd20f&rlz=1C1CHBF_enCA832CA832&output=search&q=Second+Student+Centre,+York+University&source=lnms&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cyi4EYJ5__xGYa6IklcxJgUe7FK8X0Cl7tuB93847Q5XKMK3snwamK27ChS0uJe7x2Hl31-PcDLRIZ9jqTJjMe5BTQGpOcXAYILflg1Vx-IbXC9bfnHPH6-n0rnpOyGeWQI--LAaUv2aWVpCwDIqT30DM_CFbc4lZzwwvNh4jXbVT9S2cibCTniGN7LPYEb-XBP0wyw&entry=mc&ved=1t:200715&ictx=111"> Second Student Centre </a>, York University</strong><br>
+            15 Library Lane<br>
+            Toronto, ON, M3J 1P3<br>
             Canada</p>
 
             <p style="margin-top: 1rem;">The conference will be held at York University's Keele Campus in Toronto. The campus is easily accessible by public transit via the TTC York University Station (Line 1) and offers ample parking for those driving.</p>
